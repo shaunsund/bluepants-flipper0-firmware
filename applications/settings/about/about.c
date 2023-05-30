@@ -32,7 +32,7 @@ static DialogMessageButton product_screen(DialogsApp* dialogs, DialogMessage* me
         message, furi_string_get_cstr(screen_text), 0, 26, AlignLeft, AlignTop);
     result = dialog_message_show(dialogs, message);
     dialog_message_set_header(message, NULL, 0, 0, AlignLeft, AlignTop);
-    dialog_message_set_text(message, NULL, 0, 0, AlignLeft, AlignTop);
+    dialog_message_set_text(message, "BluePants.dev", 0, 0, AlignLeft, AlignTop);
 
     furi_string_free(screen_header);
     furi_string_free(screen_text);
@@ -104,7 +104,7 @@ static DialogMessageButton hw_version_screen(DialogsApp* dialogs, DialogMessage*
         furi_hal_version_get_hw_connect(),
         furi_hal_version_get_hw_region_name(),
         furi_hal_region_get_name(),
-        my_name ? my_name : "Unknown");
+        my_name ? my_name : "BluePants.dev");
 
     furi_string_cat_printf(buffer, "Serial Number:\n");
     const uint8_t* uid = furi_hal_version_uid();
@@ -139,7 +139,7 @@ static DialogMessageButton fw_version_screen(DialogsApp* dialogs, DialogMessage*
         furi_hal_info_get_api_version(&api_major, &api_minor);
         furi_string_cat_printf(
             buffer,
-            "%s [%s]\n%s%s [%d.%d] %s\n[%d] %s",
+            "%s [%s]\n%s%s [%d.%d] %s\n[%d] %s https://bluepants.dev/",
             version_get_version(ver),
             version_get_builddate(ver),
             version_get_dirty_flag(ver) ? "[!] " : "",

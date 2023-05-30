@@ -14,9 +14,9 @@ To use `fbt`, you only need `git` installed in your system.
  >    - On Windows, simply run `scripts/toolchain/fbtenv.cmd`.
  >    - On Linux & MacOS, run `source scripts/toolchain/fbtenv.sh` in a new shell.
  >    - You can also type ```. `./fbt -s env` ``` in your shell. (Keep  the "." at the beginning.)
- 
+
  If your system is not supported by pre-built toolchain variants or you want to use custom versions of dependencies, you can `set FBT_NOENV=1`. `fbt` will skip toolchain & environment configuration and will expect all tools to be available on your system's `PATH`. *(this option is not available on Windows)*
- 
+
  If `FBT_TOOLCHAIN_PATH` variable is set, `fbt` will use that directory to unpack toolchain into. By default, it downloads toolchain into `toolchain` subdirectory repo's root.
 
 If you want to enable extra debug output for `fbt` and toolchain management scripts, you can `set FBT_VERBOSE=1`.
@@ -39,7 +39,7 @@ To run cleanup (think of `make clean`) for specified targets, add the `-c` optio
 ## Build directories
 
 `fbt` builds updater & firmware in separate subdirectories in `build`, and their names depend on optimization settings (`COMPACT` & `DEBUG` options). However, for ease of integration with IDEs, the latest built variant's directory is always linked as `built/latest`. Additionally, `compile_commands.json` is generated in that folder (it is used for code completion support in IDEs).
- 
+
 `build/latest` symlink & compilation database are only updated upon *firmware build targets* - that is, when you're re-building the firmware itself. Running other tasks, like firmware flashing or building update bundles *for a different debug/release configuration or hardware target*, does not update `built/latest` dir to point to that configuration.
 
 ## VSCode integration

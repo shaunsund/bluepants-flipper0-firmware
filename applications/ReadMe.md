@@ -1,19 +1,19 @@
 # Structure
 
-## debug 
+## debug
 
 Applications for factory testing the Flipper.
 
-- `accessor`            - Wiegand server 
+- `accessor`            - Wiegand server
 - `battery_test_app`    - Battery debug app
-- `blink_test`          - LED blinker   
+- `blink_test`          - LED blinker
 - `bt_debug_app`        - BT test app. Requires full BT stack installed
 - `display_test`        - Various display tests & tweaks
 - `file_browser_test`   - Test UI for file picker
 - `keypad_test`         - Keypad test
 - `lfrfid_debug`        - LF RFID debug tool
 - `text_box_test`       - UI tests
-- `uart_echo`           - UART mode test 
+- `uart_echo`           - UART mode test
 - `unit_tests`          - Unit tests
 - `usb_mouse`           - USB HID test
 - `usb_test`            - Other USB tests
@@ -24,7 +24,7 @@ Applications for factory testing the Flipper.
 
 Applications for main Flipper menu.
 
-- `archive`             - Archive and file manager 
+- `archive`             - Archive and file manager
 - `bad_usb`             - Bad USB application
 - `fap_loader`          - External applications loader
 - `gpio`                - GPIO application: includes USART bridge and GPIO control
@@ -66,7 +66,7 @@ Background services providing system APIs to applications.
 - `gui`                 - GUI service and API
 - `input`               - Input service
 - `loader`              - Application loader service
-- `notification`        - Notification service 
+- `notification`        - Notification service
 - `power`               - Power service
 - `rpc`                 - RPC service and API
 - `storage`             - Storage service, internal + sdcard
